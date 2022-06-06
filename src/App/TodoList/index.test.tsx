@@ -1,7 +1,7 @@
 import { fireEvent } from '@testing-library/react'
 import React from 'react'
 
-import type { AppState } from '../../dataStructure'
+import type { AppState } from '../../AppState'
 import { renderWithRecoilRoot } from '../../testUtil'
 
 import TodoList from './index'

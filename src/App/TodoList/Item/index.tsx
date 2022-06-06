@@ -1,8 +1,8 @@
 import React, { useState, createRef, useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 
-import type { AppState, Todo, TodoListType } from '../../../dataStructure'
-import { recoilState } from '../../../dataStructure'
+import type { AppState, Todo, TodoListType } from '../../../AppState'
+import { recoilState } from '../../../AppState'
 
 import { Layout } from './style'
 
@@ -93,7 +93,6 @@ const Item: React.FC<Props> = ({ todo }) => {
   }
 
   useEffect(() => {
-    // For fucus input element when double clicks text label. fix this https://github.com/laststance/create-react-app-typescript-todo-example-2021/issues/50
     if (state.onEdit === true && editInput.current !== null)
       editInput.current.focus()
   }, [editInput, state.onEdit])

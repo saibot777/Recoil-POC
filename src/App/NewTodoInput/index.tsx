@@ -1,8 +1,8 @@
 import React, { createRef } from 'react'
 import { useRecoilState } from 'recoil'
 
-import type { AppState, Todo } from '../../dataStructure'
-import { recoilState } from '../../dataStructure'
+import type { AppState, Todo } from '../../AppState'
+import { recoilState } from '../../AppState'
 import { UUID } from '../../functions'
 
 import { Layout } from './style'

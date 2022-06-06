@@ -2,8 +2,8 @@ import type { RouteComponentProps } from '@reach/router'
 import React, { useEffect } from 'react'
 import { useRecoilValue } from 'recoil'
 
-import type { AppState, Routes } from '../dataStructure'
-import { recoilState, LocalStorageKey } from '../dataStructure'
+import type { AppState, Routes } from '../AppState'
+import { recoilState, LocalStorageKey } from '../AppState'
 
 import Copyright from './Copyright'
 import NewTodoInput from './NewTodoInput'

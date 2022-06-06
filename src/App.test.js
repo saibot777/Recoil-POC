@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom/client'
 import { RecoilRoot } from 'recoil'
 
 import App from './App'
-import { recoilState } from './dataStructure'
+import { recoilState } from './AppState'
 
 it('renders without crashing', () => {
   const todo = {

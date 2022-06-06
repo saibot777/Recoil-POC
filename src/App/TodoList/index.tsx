@@ -2,8 +2,8 @@ import type { ReactElement } from 'react'
 import React from 'react'
 import { useRecoilState } from 'recoil'
 
-import type { AppState, Routes, Todo } from '../../dataStructure'
-import { recoilState } from '../../dataStructure'
+import type { AppState, Routes, Todo } from '../../AppState'
+import { recoilState } from '../../AppState'
 
 import Item from './Item'
 import { Layout } from './style'

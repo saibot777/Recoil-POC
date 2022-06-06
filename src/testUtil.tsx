@@ -4,8 +4,8 @@ import React from 'react'
 import type { MutableSnapshot } from 'recoil'
 import { RecoilRoot } from 'recoil'
 
-import type { AppState } from './dataStructure'
-import { recoilState } from './dataStructure'
+import type { AppState } from './AppState'
+import { recoilState } from './AppState'
 
 const defaultValue: AppState = {
   todoList: [],

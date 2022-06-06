@@ -1,8 +1,8 @@
 import React from 'react'
 import { useRecoilState } from 'recoil'
 
-import type { AppState, Routes, Todo } from '../../dataStructure'
-import { recoilState } from '../../dataStructure'
+import type { AppState, Routes, Todo } from '../../AppState'
+import { recoilState } from '../../AppState'
 
 import FilterLink from './FilterLink'
 import { Layout } from './style'

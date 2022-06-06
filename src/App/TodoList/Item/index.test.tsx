@@ -2,8 +2,8 @@ import { fireEvent, screen } from '@testing-library/react'
 import React from 'react'
 import { useRecoilState } from 'recoil'
 
-import type { AppState } from '../../../dataStructure'
-import { recoilState } from '../../../dataStructure'
+import type { AppState } from '../../../AppState'
+import { recoilState } from '../../../AppState'
 import { renderWithRecoilRoot } from '../../../testUtil'
 
 import Item from './index'

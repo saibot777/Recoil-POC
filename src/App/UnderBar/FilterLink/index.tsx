@@ -1,7 +1,7 @@
 import { Link } from '@reach/router'
 import React from 'react'
 
-import type { Routes } from '../../../dataStructure'
+import type { Routes } from '../../../AppState'
 
 interface Props {
   path: Routes
