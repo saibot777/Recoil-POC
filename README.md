@@ -26,4 +26,4 @@ with eslint --fix option.
 
 ### `yarn test`
 
-### UI used from Part of "http://todomvc.com" - TodoMVC
+### UI borrowed and modified from "http://todomvc.com" - TodoMVC
