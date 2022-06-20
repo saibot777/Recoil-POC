@@ -5,10 +5,10 @@ import { useRecoilValue } from 'recoil'
 import type { AppState, Routes } from '../AppState'
 import { recoilState, LocalStorageKey } from '../AppState'
 
-import Copyright from './Copyright'
 import NewTodoInput from './NewTodoInput'
 import { Layout } from './style'
 import TodoList from './TodoList'
+import { TodoListStats } from './TodoListStats'
 import UnderBar from './UnderBar'
 
 interface Props {
@@ -36,8 +36,8 @@ const App: React.FC<Props & RouteComponentProps> = ({ path }) => {
             <UnderBar path={path} />
           </>
         ) : null}
+        <TodoListStats />
       </section>
-      <Copyright />
     </Layout>
   )
 }

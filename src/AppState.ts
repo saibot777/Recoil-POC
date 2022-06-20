@@ -1,5 +1,5 @@
 import type { RecoilState } from 'recoil'
-import { atom } from 'recoil'
+import { atom, selector } from 'recoil'
 
 export type Routes = '/' | '/active' | '/completed'
 
@@ -37,5 +37,24 @@ function LoadAppStateFromLocalStorage(): AppState {
 
 export const recoilState: RecoilState<AppState> = atom({
   default: LoadAppStateFromLocalStorage(),
-  key: 'initialAppState',
+  key: 'appState',
 })
+
+export const todoListStatsState = selector({
+  key: 'todoListStatsState',
+  get: ({get}) => {
+    const appState = get(recoilState);
+    const totalNum = appState.todoList.length;
+    const totalCompletedNum = appState.todoList.filter(item => item.completed).length;
+    const totalUncompletedNum = totalNum - totalCompletedNum;
+    const percentCompleted =
+      totalNum === 0 ? 0 : (totalCompletedNum / totalNum) * 100;
+
+    return {
+      totalNum,
+      totalCompletedNum,
+      totalUncompletedNum,
+      percentCompleted,
+    };
+  },
+});
